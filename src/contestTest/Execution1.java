@@ -19,14 +19,18 @@ public class Execution1 {
         String baseURL = "http://www.oddsportal.com/";
         driver.get(baseURL);
 
+        Creds credentials = new Creds();
+        String username = credentials.getUsername();
+        String password = credentials.getPassword();
+
         driver.findElement(By.name("login-submit")).click();
-        driver.findElement(By.id("login-username1")).sendKeys("Deagle");
-        driver.findElement(By.id("login-password1")).sendKeys("oddsportal.com2013");
+        driver.findElement(By.id("login-username1")).sendKeys(username);
+        driver.findElement(By.id("login-password1")).sendKeys(password);
 
         driver.findElement(By.cssSelector("#col-content [type='submit']")).click();
 //        driver.findElement(By.xpath("//*[@id='col-content']//button[@name='login-submit']")).click();
 
-        driver.findElement(By.linkText("Deagle")).click();
+        driver.findElement(By.linkText(username)).click();
         driver.findElement(By.id("feed_menu_feeds")).click();
         Thread.sleep(3000);
 
