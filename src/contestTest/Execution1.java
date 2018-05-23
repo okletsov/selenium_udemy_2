@@ -15,9 +15,6 @@ public class Execution1 {
         driver.manage().window().maximize();
 
         String baseURL = "http://www.oddsportal.com/";
-        List <WebElement>  predictions;
-        String itemID;
-        String itemText;
         driver.get(baseURL);
 
         Creds credentials = new Creds();
@@ -29,7 +26,6 @@ public class Execution1 {
         driver.findElement(By.id("login-password1")).sendKeys(password);
 
         driver.findElement(By.cssSelector("#col-content [type='submit']")).click();
-//        driver.findElement(By.xpath("//*[@id='col-content']//button[@name='login-submit']")).click();
 
         driver.findElement(By.linkText(username)).click();
         driver.findElement(By.id("feed_menu_feeds")).click();
@@ -38,22 +34,32 @@ public class Execution1 {
         driver.findElement(By.className("view-more")).click();
         Thread.sleep(3000);
 
-        predictions = driver.findElements(By.cssSelector(".feed-item"));
-        // List predictions = driver.findElements(By.xpath("//*[@class='feed-item']"));
-
-        System.out.println("The number of predictions found is: " + predictions.size());
-
-//        itemText = driver.findElement(By.cssSelector("#feed_item_2887498303 .odd a")).getText();
-//        // String text = driver.findElement(By.xpath("//*[@id='feed_item_2887498303']//*[@class='odd']//a[1]")).getText();
-//
-//        System.out.println("Captured text is: " + itemText);
-
         // Getting the list of feed item IDs (to inspect elements within them in future)
-        for (int i = 0; i < predictions.size(); i++) {
-            itemID = predictions.get(i).getAttribute("id");
-//            System.out.println(itemID);
+        List <WebElement> feedItems;
+        String itemID;
+        String itemText;
+
+        feedItems = driver.findElements(By.cssSelector(".feed-item"));
+        System.out.println("The number of predictions found is: " + feedItems.size());
+
+        for (int i = 0; i < feedItems.size(); i++) {
+            itemID = feedItems.get(i).getAttribute("id");
             itemText = driver.findElement(By.cssSelector("#" + itemID + " .odd a")).getText();
             System.out.println(itemText);
+
+            // Getting the index of user prediction
+            Integer userPickIndex;
+            List <WebElement> pickColumns;
+            String pickText;
+
+            pickColumns = driver.findElements(By.cssSelector("#" + itemID + "  [class='pred-usertip'] td"));
+            for (int a=0; a < pickColumns.size(); a++){
+                pickText = pickColumns.get(a).getText();
+                if (pickText.contains("PICK")){
+                    userPickIndex = a + 1;
+                    System.out.println("User pick: " + userPickIndex);
+                }
+            }
         }
     }
 }
