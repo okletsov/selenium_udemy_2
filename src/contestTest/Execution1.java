@@ -37,7 +37,7 @@ public class Execution1 {
         driver.findElement(By.className("view-more")).click();
         Thread.sleep(3000);
 
-        List predictions = driver.findElements(By.cssSelector(".feed-item"));
+        List <WebElement> predictions = driver.findElements(By.cssSelector(".feed-item"));
         // List predictions = driver.findElements(By.xpath("//*[@class='feed-item']"));
 
         System.out.println("The number of predictions found is: " + predictions.size());
@@ -47,5 +47,10 @@ public class Execution1 {
 
         System.out.println("Captured text is: " + text);
 
+        // Getting the list of feed item IDs (to inspect elements within them in future)
+        for (int i = 0; i < predictions.size(); i++) {
+            String itemID = predictions.get(i).getAttribute("id");
+            System.out.println(itemID);
+        }
     }
 }
