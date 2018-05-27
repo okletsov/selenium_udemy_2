@@ -52,4 +52,15 @@ public class GenericMethods {
             return null;
         }
     }
+
+    public boolean isElementPresent (String locator, String type) {
+        List <WebElement> elementList = getElementsList(locator, type);
+        int size = elementList.size();
+        if (size > 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
