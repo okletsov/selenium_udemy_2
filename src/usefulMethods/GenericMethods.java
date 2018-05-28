@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GenericMethods {
@@ -35,22 +36,27 @@ public class GenericMethods {
 
     public List<WebElement> getElementsList(String locator, String type){
         type = type.toLowerCase();
+        List <WebElement> elementList = new ArrayList<>();
         if (type.equals("id")) {
-            System.out.println("Elements found with id: " + locator);
-            return this.driver.findElements(By.id(locator));
+            elementList = this.driver.findElements(By.id(locator));
         }
         else if (type.equals("xpath")) {
-            System.out.println("Elements found with xpath: " + locator);
-            return this.driver.findElements(By.xpath(locator));
+            elementList = this.driver.findElements(By.xpath(locator));
         }
         else if (type.equals("css")){
-            System.out.println("Elements found with css: " + locator);
-            return  this.driver.findElements(By.cssSelector(locator));
+            elementList = this.driver.findElements(By.cssSelector(locator));
         }
         else {
             System.out.println("Locator type not supported");
-            return null;
         }
+
+        if (elementList.isEmpty()){
+            System.out.println("Element not found with " + type + ": " + locator);
+        }
+        else {
+            System.out.println("Element found with " + type + ": " + locator);
+        }
+        return elementList;
     }
 
     public boolean isElementPresent (String locator, String type) {

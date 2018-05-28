@@ -28,8 +28,11 @@ public class IsElementPresentDemo {
     public void testMethod() throws Exception{
         driver.get(baseUrl);
 
-        Boolean isElementPresent = gm.isElementPresent("displayed-text", "id");
-        System.out.println("The element is present: " +  isElementPresent);
+        Boolean result1 = gm.isElementPresent("displayed-text", "id");
+        System.out.println("The element is present: " +  result1);
+
+        Boolean result2 = gm.isElementPresent("not-existing-locator", "id");
+        System.out.println("The element is present: " +  result2);
     }
 
     @After
