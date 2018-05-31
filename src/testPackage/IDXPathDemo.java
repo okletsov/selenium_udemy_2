@@ -6,15 +6,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utilities.WaitTypes;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class IDXPathDemo {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "C:\\Automation_Program_Files\\chromedriver_win32\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Automation_Program_Files\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WaitTypes wt = new WaitTypes(driver);
 
         String baseURL = "http:\\www.google.com";
         driver.manage().window().maximize();
@@ -32,7 +34,8 @@ public class IDXPathDemo {
         // Using Explicit wait. The app will wait for defined amount of time (defined above) OR execute code as soon
         // as condition (specified here) is met
         WebElement googleSearch;
-        googleSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='gstl_0 sbdd_a']//input[@value='Google Search']")));
+        googleSearch = wt.waitForElement(By.xpath("//*[@class='gstl_0 sbdd_a']//input[@value='Google Search']"), 2);
+//        googleSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='gstl_0 sbdd_a']//input[@value='Google Search']")));
         googleSearch.click();
 
     }
