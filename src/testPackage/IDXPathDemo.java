@@ -36,7 +36,8 @@ public class IDXPathDemo {
         WebElement googleSearch;
         googleSearch = wt.waitForElement(By.xpath("//*[@class='gstl_0 sbdd_a']//input[@value='Google Search']"), 2);
 //        googleSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='gstl_0 sbdd_a']//input[@value='Google Search']")));
-        googleSearch.click();
+//        googleSearch.click();
+        wt.clickWhenReady(By.xpath("//*[@class='gstl_0 sbdd_a']//input[@value='Google Search']"), 2);
 
     }
 }
