@@ -1,6 +1,5 @@
 package testPackage;
 
-import org.apache.http.HttpConnection;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageClasses.SearchPage;
 import pageClasses.SearchPageFactory;
 
 import java.net.HttpURLConnection;
@@ -80,6 +78,6 @@ public class FindAllLinks {
     @After
     public void tearDown() throws Exception {
         Thread.sleep(2000);
-//        driver.quit();
+        driver.quit();
     }
 }
