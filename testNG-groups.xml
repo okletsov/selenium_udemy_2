@@ -1,0 +1,12 @@
+<suite name = "Grouping suite">
+	<test name = "Grouping test">
+		<groups>
+			<run>
+				<include name = "cars"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name = "testNG.testClasses.TestNG_Grouping"></class>
+		</classes>
+	</test>
+</suite>
