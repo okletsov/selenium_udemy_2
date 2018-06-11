@@ -1,8 +1,18 @@
 <suite name = "Grouping suite">
 	<test name = "Grouping test">
 		<groups>
-			<run>
+			<define name = "noBikes">
+				<include name = "suv"></include>
+				<include name = "sedan"></include>
+			</define>
+			<define name = "all">
+				<include name = "bikes"></include>
+				<include name = "suv"></include>
+				<include name = "sedan"></include>
 				<include name = "cars"></include>
+			</define>
+			<run>
+				<include name = "noBikes"></include>
 			</run>
 		</groups>
 		<classes>
