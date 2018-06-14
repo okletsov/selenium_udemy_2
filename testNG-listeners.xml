@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Listeners">
+	<test name = "Test 1 Listeners">
+		<classes>
+			<class name = "testNG.testClasses.TestNG_Listeners1"></class>
+		</classes>
+	</test>
+</suite>
