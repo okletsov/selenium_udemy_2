@@ -1,13 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name = "Listeners">
+	<listeners>
+		<listener class-name="listeners.CustomListener3"></listener>
+	</listeners>
 	<test name = "Test 1 Listeners">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Listeners2"></class>
+			<class name = "testNG.testClasses.TestNG_Listeners3"></class>
 		</classes>
 	</test>
 	<test name = "Test 2 Listeners">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Listeners2"></class>
+			<class name = "testNG.testClasses.TestNG_Listeners3"></class>
 		</classes>
 	</test>
 </suite>
