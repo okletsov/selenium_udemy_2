@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Reporter and Logs">
+	<test name = "Test 1 in Reporter and Logs">
+		<classes>
+			<class name = "testNG.testClasses.TestNG_ReportsAndLogs"></class>
+		</classes>
+	</test>
+</suite>
