@@ -150,20 +150,20 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-1.2-api-2.11.0.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-api-2.11.0.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-core-2.11.0-tests.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-core-2.11.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-1.2-api-2.11.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-api-2.11.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-core-2.11.0-tests.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-core-2.11.0.jar!/" />
         </CLASSES>
         <JAVADOC>
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-1.2-api-2.11.0-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-api-2.11.0-javadoc.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-core-2.11.0-javadoc.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-1.2-api-2.11.0-javadoc.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-api-2.11.0-javadoc.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-core-2.11.0-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-1.2-api-2.11.0-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-api-2.11.0-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/apache-log4j-2.11.0-bin/log4j-core-2.11.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-1.2-api-2.11.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-api-2.11.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../apache-log4j-2.11.0-bin/log4j-core-2.11.0-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
