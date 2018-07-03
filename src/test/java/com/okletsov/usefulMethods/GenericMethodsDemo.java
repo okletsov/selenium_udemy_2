@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
-import usefulMethods.GenericMethods;
+import com.okletsov.usefulMethods.GenericMethods;
 
 public class GenericMethodsDemo {
     private WebDriver driver;

@@ -1,7 +1,7 @@
 package com.okletsov.testNG.testClasses;
 
 import org.testng.annotations.Test;
-import testNG.appCode.SomeClassToTest;
+import com.okletsov.testNG.appCode.SomeClassToTest;
 
 public class TestAnnotation {
 

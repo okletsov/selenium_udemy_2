@@ -1,6 +1,6 @@
 package com.okletsov.testNG.regressionClasses;
 
-import base.BaseTestSuite;
+import com.okletsov.base.BaseTestSuite;
 import org.testng.annotations.*;
 
 public class TestNG_TestClass1 extends BaseTestSuite{

@@ -1,6 +1,6 @@
 package com.okletsov.testNG.testClasses;
 
-import listeners.CustomListener1;
+import com.okletsov.listeners.CustomListener1;
 import org.testng.Assert;
 import org.testng.annotations.*;
 

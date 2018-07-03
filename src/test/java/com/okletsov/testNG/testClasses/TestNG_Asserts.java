@@ -2,7 +2,7 @@ package com.okletsov.testNG.testClasses;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import testNG.appCode.SomeClassToTest;
+import com.okletsov.testNG.appCode.SomeClassToTest;
 
 public class TestNG_Asserts {
     @Test

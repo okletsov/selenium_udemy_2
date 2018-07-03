@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import testNG.appCode.SomeClassToTest;
+import com.okletsov.testNG.appCode.SomeClassToTest;
 
 public class TestNG_dependant_tests {
 

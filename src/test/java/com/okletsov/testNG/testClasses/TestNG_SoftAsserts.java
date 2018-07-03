@@ -3,7 +3,7 @@ package com.okletsov.testNG.testClasses;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import testNG.appCode.SomeClassToTest;
+import com.okletsov.testNG.appCode.SomeClassToTest;
 
 public class TestNG_SoftAsserts {
 	@Test
