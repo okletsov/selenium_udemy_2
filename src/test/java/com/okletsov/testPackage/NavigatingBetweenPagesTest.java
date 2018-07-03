@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class NavigatingBetweenPages {
+public class NavigatingBetweenPagesTest {
     WebDriver driver;
     String baseURL;
 

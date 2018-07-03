@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import com.okletsov.usefulMethods.GenericMethods;
 
-public class GenericMethodsDemo {
+public class GenericMethodsDemoTest {
     private WebDriver driver;
     private String baseUrl;
     private GenericMethods gm;

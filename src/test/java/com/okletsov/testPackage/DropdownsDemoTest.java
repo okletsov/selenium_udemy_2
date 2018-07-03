@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class DropdownsDemo {
+public class DropdownsDemoTest {
         WebDriver driver;
         String baseURL;
 

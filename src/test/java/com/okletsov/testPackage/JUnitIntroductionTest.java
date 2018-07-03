@@ -4,7 +4,7 @@ import org.junit.*;
 
 import static junit.framework.TestCase.fail;
 
-public class JUnitIntroduction {
+public class JUnitIntroductionTest {
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {

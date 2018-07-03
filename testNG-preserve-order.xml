@@ -1,3 +1,4 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name = "Preserve order">
 	<test name = "Test 1 in Preserve order" preserve-order = "true">
 		<classes>

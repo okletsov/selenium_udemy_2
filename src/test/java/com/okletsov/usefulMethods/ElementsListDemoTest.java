@@ -4,12 +4,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class IsElementPresentDemo {
+public class ElementsListDemoTest {
     private WebDriver driver;
     private String baseUrl;
     private GenericMethods gm;
@@ -28,11 +29,8 @@ public class IsElementPresentDemo {
     public void testMethod() throws Exception{
         driver.get(baseUrl);
 
-        Boolean result1 = gm.isElementPresent("displayed-text", "id");
-        System.out.println("The element is present: " +  result1);
-
-        Boolean result2 = gm.isElementPresent("not-existing-locator", "id");
-        System.out.println("The element is present: " +  result2);
+        List elementList = gm.getElementsList("input[type='text']", "css");
+        System.out.println("Size of the element list is: " + elementList.size());
     }
 
     @After

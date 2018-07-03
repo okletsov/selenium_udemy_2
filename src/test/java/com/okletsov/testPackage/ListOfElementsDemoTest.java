@@ -8,36 +8,44 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class ElementState {
+public class ListOfElementsDemoTest {
     WebDriver driver;
     String baseURL;
 
     @Before
     public void setUp() throws Exception {
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        baseURL = "https://www.google.com/";
+        baseURL = "https://letskodeit.teachable.com/p/practice";
     }
 
     @Test
     public void test() throws Exception {
         driver.get(baseURL);
-        WebElement e1 = driver.findElement(By.id("gs_taif0"));
-        System.out.println("E1 is enabled? :" + e1.isEnabled());
+        boolean isChecked = false;
+        List<WebElement> radioButtons = driver.findElements(By.cssSelector("[name='cars'][type='radio']"));
+        int size = radioButtons.size();
+        System.out.println("Size of the list is " + size);
 
-        WebElement e2 = driver.findElement(By.id("lst-ib"));
-        System.out.println("E2 is enabled? :" + e2.isEnabled());
+        for (int i = 0; i < size; i++){
+            isChecked = radioButtons.get(i).isSelected();
 
-        WebElement e3 = driver.findElement(By.id("gs_htif0"));
-        System.out.println("E3 is enabled? :" + e3.isEnabled());
-
+            if (!isChecked) {
+                radioButtons.get(i).click();
+                Thread.sleep(2000);
+            }
+        }
     }
 
     @After
     public void tearDown() throws Exception {
         driver.quit();
     }
+
+
 }

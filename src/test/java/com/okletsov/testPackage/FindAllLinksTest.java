@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class FindAllLinks {
+public class FindAllLinksTest {
     private WebDriver driver;
     private String baseUrl;
 

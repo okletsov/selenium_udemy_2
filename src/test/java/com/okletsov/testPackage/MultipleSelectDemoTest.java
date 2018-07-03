@@ -7,16 +7,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class RadioButtonsCheckBoxes {
+public class MultipleSelectDemoTest {
     WebDriver driver;
     String baseURL;
 
     @Before
     public void setUp() throws Exception {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Automation_Program_Files\\chromedriver_win32\\chromedriver.exe");
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -26,30 +28,38 @@ public class RadioButtonsCheckBoxes {
     @Test
     public void test() throws Exception {
         driver.get(baseURL);
-        WebElement bmwRadioBtn = driver.findElement(By.id("bmwradio"));
-        bmwRadioBtn.click();
+        WebElement element = driver.findElement(By.id("multiple-select-example"));
+        Select sel = new Select(element);
+
+        // Selecting elements
+        sel.selectByValue("apple");
         Thread.sleep(2000);
 
-        WebElement benzRadioBtn = driver.findElement(By.id("benzradio"));
-        benzRadioBtn.click();
+        sel.selectByIndex(1);
         Thread.sleep(2000);
 
-        WebElement bmwCheckBox = driver.findElement(By.id("bmwcheck"));
-        bmwCheckBox.click();
+        sel.selectByVisibleText("Peach");
         Thread.sleep(2000);
 
-        WebElement benzCheckBox = driver.findElement(By.id("benzcheck"));
-        benzCheckBox.click();
+        // Deselecting elements
+        sel.deselectByValue("apple");
         Thread.sleep(2000);
 
-        System.out.println("BMW radio is selected: " + bmwRadioBtn.isSelected());
-        System.out.println("BMW checkbox is selected: " + bmwCheckBox.isSelected());
+        // Printing all selected options
+        List <WebElement> selectedOptions = sel.getAllSelectedOptions();
+
+        for (WebElement option: selectedOptions) {
+            System.out.println(option.getText());
+        }
+        Thread.sleep(2000);
+
+        // Deselectiong all  options
+        sel.deselectAll();
+        Thread.sleep(2000);
     }
 
     @After
     public void tearDown() throws Exception {
         driver.quit();
     }
-
-
 }

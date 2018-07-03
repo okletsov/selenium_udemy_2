@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class BasicActions {
+public class BasicActionsTest {
 
     WebDriver driver;
     String baseURL;
