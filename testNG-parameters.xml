@@ -5,7 +5,7 @@
 		<parameter name="platform" value="windows"></parameter>
 		<parameter name="response" value="201,202"></parameter>
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Parameters"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Parameters"></class>
 		</classes>
 	</test>
 </suite>

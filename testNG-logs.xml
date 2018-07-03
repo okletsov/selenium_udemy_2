@@ -2,7 +2,7 @@
 <suite name = "Reporter and Logs">
 	<test name = "Test 1 in Reporter and Logs">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_ReportsAndLogs"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_ReportsAndLogs"></class>
 		</classes>
 	</test>
 </suite>

@@ -1,15 +1,15 @@
 <suite name = "Preserve order">
 	<test name = "Test 1 in Preserve order" preserve-order = "true">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Preserve2"></class>
-			<class name = "testNG.testClasses.TestNG_Preserve1"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Preserve2"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Preserve1"></class>
 		</classes>
 	</test>
 
 	<test name = "Test 2 in Preserve order" enabled = "false">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Preserve2"></class>
-			<class name = "testNG.testClasses.TestNG_Preserve1"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Preserve2"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Preserve1"></class>
 		</classes>
 	</test>
 </suite>

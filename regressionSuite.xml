@@ -1,8 +1,8 @@
 <suite name = "Regression Suite">
     <test name = "Test 1 in Regression Suite">
         <classes>
-            <class name = "testNG.regressionClasses.TestNG_TestClass1"></class>
-            <class name = "testNG.regressionClasses.TestNG_TestClass2"></class>
+            <class name = "com.okletsov.testNG.regressionClasses.TestNG_TestClass1"></class>
+            <class name = "com.okletsov.testNG.regressionClasses.TestNG_TestClass2"></class>
         </classes>
     </test>
 </suite>

@@ -2,12 +2,12 @@
 <suite name = "Parallel Suite " parallel="methods" thread-count="2">
 	<test name = "Test 1 Parallel Suite">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Parallel1"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Parallel1"></class>
 		</classes>
 	</test>
 	<test name = "Test 2 Parallel Suite">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_Parallel2"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_Parallel2"></class>
 		</classes>
 	</test>
 </suite>

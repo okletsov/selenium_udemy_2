@@ -3,13 +3,13 @@
 <test name="Firefox Test">
 <parameter name="browser" value="firefox"></parameter>
 	<classes>
-		<class name="testNG.testClasses.TestNG_Exercise"></class>
+		<class name="com.okletsov.testNG.testClasses.TestNG_Exercise"></class>
 	</classes>
 </test>
 <test name="Chrome Test">
 <parameter name="browser" value="chrome"></parameter>
 	<classes>
-		<class name="testNG.testClasses.TestNG_Exercise"></class>
+		<class name="com.okletsov.testNG.testClasses.TestNG_Exercise"></class>
 	</classes>
 </test>
 </suite>

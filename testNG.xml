@@ -2,8 +2,8 @@
 <suite name = "Test Suite 1">
 	<test name = "Test 1 in suite 1">
 		<classes>
-			<class name = "testNG.testClasses.TestNG_TestClass1"></class>
-			<class name = "testNG.testClasses.TestNG_TestClass2"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_TestClass1"></class>
+			<class name = "com.okletsov.testNG.testClasses.TestNG_TestClass2"></class>
 		</classes>
 	</test>
 </suite>
