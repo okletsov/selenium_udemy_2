@@ -3,5 +3,4 @@ out/
 target/
 logs/
 test-output/
-Creds.java
 *.iml
